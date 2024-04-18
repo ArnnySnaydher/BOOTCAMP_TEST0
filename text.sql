@@ -47,3 +47,38 @@ CONSTRAINT pk_hospital PRIMARY KEY (idHospital),
     CONSTRAINT fk_hospital_condicion FOREIGN KEY (idCondicion)
         REFERENCES Condicion(idCondicion)
 );
+
+-- REGISTRO EN LAS TABLAS
+--------------------------------------------------------
+INSERT INTO Gerente (idGerente, descGerente, fechaRetgistro) 
+VALUES (1, 'Arnny', CURRENT_TIMESTAMP);
+
+INSERT INTO Gerente (idGerente, descGerente, fechaRetgistro) 
+VALUES (2, 'Jesus', CURRENT_TIMESTAMP);
+--------------------------------------------------------
+INSERT INTO Condicion (idCondicion, descCondicion, fechaRegistro) 
+VALUES (1, 'Condicionuno', CURRENT_TIMESTAMP);
+INSERT INTO Condicion (idCondicion, descCondicion, fechaRegistro) 
+VALUES (2, 'Condiciondos', CURRENT_TIMESTAMP);
+
+--------------------------------------------------------
+INSERT INTO Provincia (idProvincia, descProvincia, fechaRegistro) 
+VALUES (1, 'Lima', CURRENT_TIMESTAMP);
+INSERT INTO Provincia (idProvincia, descProvincia, fechaRegistro) 
+VALUES (2, 'Callao', CURRENT_TIMESTAMP);
+
+--------------------------------------------------------
+INSERT INTO Distrito (idDistrito, idProvincia, descDistrito, fechaRegistro) 
+VALUES (1, 1, 'Brenia', CURRENT_TIMESTAMP);
+INSERT INTO Distrito (idDistrito, idProvincia, descDistrito, fechaRegistro) 
+VALUES (2, 2, 'Bellavista', CURRENT_TIMESTAMP);
+
+--------------------------------------------------------
+INSERT INTO Hospital (idHospital, idDistrito, Nombre, Antiguedad, Area, idGerente, idCondicion, fechaRegistro) 
+VALUES (1, '2', 'Hospital Nacional Ana', 10, 90.50, 2, 1, CURRENT_TIMESTAMP);
+
+INSERT INTO Hospital (idHospital, idDistrito, Nombre, Antiguedad, Area, idGerente, idCondicion, fechaRegistro) 
+VALUES (2, '2', 'Hospital Privado Bellavista', 10, 90.50, 2, 1, CURRENT_TIMESTAMP);
+
+INSERT INTO Hospital (idHospital, idDistrito, Nombre, Antiguedad, Area, idGerente, idCondicion, fechaRegistro) 
+VALUES (3, '1', 'Hospital Nacional ate', 10, 90.50, 2, 1, CURRENT_TIMESTAMP);
