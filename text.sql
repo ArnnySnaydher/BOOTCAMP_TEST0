@@ -88,7 +88,10 @@ UPDATE Hospital
 SET idGerente = 1
 WHERE idHospital = 2;
 
--- ELIMINAR HOSPITAL POR IDHOSPITAL
 UPDATE Hospital
 SET idCondicion = "PRUEBA"
 WHERE idHospital = 2;
+
+-- ELIMINAR HOSPITAL POR IDHOSPITAL
+DELETE FROM Hospital
+WHERE idHospital = 1;
