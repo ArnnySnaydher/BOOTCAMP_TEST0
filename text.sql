@@ -95,3 +95,28 @@ WHERE idHospital = 2;
 -- ELIMINAR HOSPITAL POR IDHOSPITAL
 DELETE FROM Hospital
 WHERE idHospital = 1;
+
+
+-- LISTAS DE QUERYS
+SELECT H.idHospital, H.Nombre, H.idDistrito
+FROM Hospital H
+INNER JOIN Distrito D ON H.idDistrito = D.idDistrito
+INNER JOIN Provincia P ON D.idProvincia = P.idProvincia
+WHERE P.descProvincia = 'Callao';
+
+SELECT *
+FROM Hospital
+WHERE Nombre LIKE '%Nacional%';
+
+SELECT *
+FROM Hospital
+WHERE Nombre LIKE '%a';
+
+SELECT UPPER(Nombre) AS Nombre_Mayuscula
+FROM Hospital;
+
+SELECT P.descProvincia, COUNT(H.idHospital) AS Numero_Hospitales
+FROM Provincia P
+JOIN Distrito D ON P.idProvincia = D.idProvincia
+JOIN Hospital H ON D.idDistrito = H.idDistrito
+GROUP BY P.descProvincia;
