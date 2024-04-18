@@ -82,3 +82,8 @@ VALUES (2, '2', 'Hospital Privado Bellavista', 10, 90.50, 2, 1, CURRENT_TIMESTAM
 
 INSERT INTO Hospital (idHospital, idDistrito, Nombre, Antiguedad, Area, idGerente, idCondicion, fechaRegistro) 
 VALUES (3, '1', 'Hospital Nacional ate', 10, 90.50, 2, 1, CURRENT_TIMESTAMP);
+
+-- ACTUALIZAR REGISTROS DEL HOSPITAL
+UPDATE Hospital
+SET idGerente = 1
+WHERE idHospital = 2;
