@@ -87,3 +87,8 @@ VALUES (3, '1', 'Hospital Nacional ate', 10, 90.50, 2, 1, CURRENT_TIMESTAMP);
 UPDATE Hospital
 SET idGerente = 1
 WHERE idHospital = 2;
+
+-- ELIMINAR HOSPITAL POR IDHOSPITAL
+UPDATE Hospital
+SET idCondicion = "PRUEBA"
+WHERE idHospital = 2;
